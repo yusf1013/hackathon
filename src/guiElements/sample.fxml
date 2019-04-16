@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiElements.StudentController">
+   <children>
+      <VBox prefHeight="422.0" prefWidth="640.0">
+         <children>
+            <MenuBar VBox.vgrow="NEVER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label layoutX="232.0" layoutY="12.0" text="Student Account">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="68.0" layoutX="158.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/students-cap.png" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutX="317.0" layoutY="61.0" orientation="VERTICAL" prefHeight="308.0" prefWidth="4.0" style="-fx-background-color: black;" />
+                  <Label layoutX="431.0" layoutY="61.0" text="View/Edit data">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="389.0" layoutY="80.0" prefWidth="200.0" style="-fx-background-color: black; -fx-border-color: black;" />
+                  <AnchorPane fx:id="editPane" layoutX="389.0" layoutY="105.0">
+                     <children>
+                        <TextField prefHeight="26.0" prefWidth="200.0" promptText="Student Name" />
+                        <TextField layoutY="35.0" prefHeight="26.0" prefWidth="200.0" promptText="Roll" />
+                        <TextField layoutY="71.0" prefHeight="26.0" prefWidth="200.0" promptText="Father's name" />
+                        <TextField layoutY="110.0" prefHeight="26.0" prefWidth="200.0" promptText="Mother's name" />
+                        <TextField layoutY="150.0" prefHeight="26.0" prefWidth="200.0" promptText="Mobile Number" />
+                        <TextField layoutY="186.0" prefHeight="26.0" prefWidth="200.0" promptText="NID" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="481.0" layoutY="325.0" mnemonicParsing="false" onAction="#edit" text="Edit" />
+                  <Button fx:id="payMoney" layoutX="112.0" layoutY="126.0" mnemonicParsing="false" onAction="#payMoney" text="Pay money" />
+                  <Button fx:id="getCert" layoutX="103.0" layoutY="215.0" mnemonicParsing="false" onAction="#getCert" text="Get certificate" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
